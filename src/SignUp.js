@@ -6,6 +6,7 @@ function SignUp() {
   const [validated, setValidated] = useState(false);
   const [validationMessage, setValidationMessage] = useState('');
   const [signedUpMessage, setSignedUpMessage] = useState('');
+  const [userName, setUserName] = useState('');
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   async function handleSubmit(e) {
@@ -23,7 +24,7 @@ function SignUp() {
         data: signUpData,
       })
       .then(({ data }) => {
-        setUserName(data.data.preferredname);
+        setUserName(data.data.preferredName);
         setSignedUpMessage(data.message);
         setSignedUp(true);
       })
@@ -78,7 +79,7 @@ function SignUp() {
     <div className="signup-form-wrapper">
       {signedUp ? (
         <div>
-          <h2>Hey!</h2>
+          <h2>Hey{' ' + userName}!</h2>
           <p>{signedUpMessage}</p>
         </div>
       ) : (
