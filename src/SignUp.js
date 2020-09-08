@@ -67,6 +67,7 @@ function SignUp() {
               setValidated(false);
             }
           });
+        setValidated(false);
       }
     } else {
       handleStyling(e.target, 'red');
