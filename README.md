@@ -1,5 +1,7 @@
 # Sign up form for raisely
 
+<img src="https://badgen.net/github/status/chtushar/raisely-signup-form"/>
+
 ### To run locally
 
 Run following command in your terminal
